@@ -12,9 +12,9 @@
           </div>
         </a>
         <#if video.published>
-        <div class="alert alert-danger" role="alert">NOT PUBLISHED</div>
-        <#else>
         <div class="alert alert-success" role="alert">PUBLISHED</div>
+        <#else>
+        <div class="alert alert-danger" role="alert">NOT PUBLISHED</div>
         </#if>
         <a href="/editVideo/${video.identifier}">edit</a>
       </div>
