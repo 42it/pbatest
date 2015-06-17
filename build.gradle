@@ -29,11 +29,17 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-jetty")
     compile("org.springframework.boot:spring-boot-starter-freemarker")
     compile("org.springframework.boot:spring-boot-starter-security")
+    compile("org.springframework.boot:spring-boot-starter-jdbc")
     compile("org.eclipse.jetty:jetty-servlets")
+    compile("commons-dbcp:commons-dbcp:1.4")
+    compile("commons-pool:commons-pool:1.5.4")
     
     compile("com.amazonaws:aws-java-sdk-s3:1.9.+")
     
     testCompile("junit:junit")
+    
+    runtime("org.postgresql:postgresql:9.4-1201-jdbc41")
+    runtime("org.liquibase:liquibase-core:3.2.2")
 }
 
 task wrapper(type: Wrapper) {

@@ -1,4 +1,5 @@
 <#include 'header.ftl'>
+<#include 'footer.ftl'>
 <@header/>
 <div class="container">
   <div class="content">
@@ -9,6 +10,23 @@
         </fieldset>
         <input type="submit" id="login" value="Login" class="btn btn-primary" />
       </form>
+   <!--   <button id="frog">g login</button> -->
     </div>
 </div>
-<#include 'footer.ftl'>
+<@footer>
+<!--
+<script>
+$('#frog').on('click', function() {
+  Hull.login({provider:'google'}).then(onSuccess, onError);
+});
+
+var onSuccess = function(user) {
+  console.log("Welcome", user.name);
+};
+
+var onError = function(error) {
+  console.log("oops, something went wrong : ", error.reason);
+}
+
+</script> -->
+</@footer>

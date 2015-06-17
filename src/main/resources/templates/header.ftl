@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <!--<link rel="stylesheet" href="theme.min.css">
-    <link rel="stylesheet" href="override.css">-->
     <#nested/>
   </head>
   <body>
@@ -24,6 +22,13 @@
           <span class="icon-bar"></span>
           </button>
           <a href="/"><span class="navbar-brand">PBA Video Test</span></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">  
+            <li><a href="/">List published</a></li>
+            <li><a href="/all">List all</a></li>
+            <li><a href="/upload">Upload</a></li>
+          </ul>
         </div>
       </nav>
 </#macro>
