@@ -1,4 +1,6 @@
 <#macro header>
+<#include 'login.ftl'>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,9 +27,12 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">  
-            <li><a href="/">List published</a></li>
-            <li><a href="/all">List all</a></li>
-            <li><a href="/upload">Upload</a></li>
+            <#if user.authenticated><li><a href="/list">List published</a></li></#if>
+            <#if user.administrator><li><a href="/all">List all</a></li>
+            <li><a href="/upload">Upload</a></li></#if>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><@login/></li>
           </ul>
         </div>
       </nav>

@@ -6,7 +6,7 @@
       <#list videos as video>
       <div class="col-xs-6 col-md-3">
         <a href="/play/${video.identifier}" class="thumbnail">
-          <img src="randalf_pad.webp" alt="${video.description}">
+          <img src="/images/randalf_pad.webp" alt="${video.description}">
           <div class="caption">
             <h6>${video.description}</h6>
           </div>

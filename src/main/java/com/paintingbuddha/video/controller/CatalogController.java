@@ -18,7 +18,7 @@ public class CatalogController
         this.videoBackend = videoBackend;
     }
     
-    @RequestMapping("/")
+    @RequestMapping("/list")
     public String list(ModelMap modelMap)
     {
         modelMap.put("videos", videoBackend.listPublished());

@@ -11,6 +11,7 @@ import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
+import com.paintingbuddha.video.util.hull.HullConfiguration;
 
 import org.apache.commons.dbcp.BasicDataSourceFactory;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -82,4 +83,9 @@ public class Configuration
         }
     }
 
+    @Bean
+    HullConfiguration provideHullConfiguration()
+    {
+        return new HullConfiguration(System.getenv("HULL_APP_ID"), System.getenv("HULL_APP_SECRET"), System.getenv("HULL_ORG_URL"));
+    }
 }
